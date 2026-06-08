@@ -11,9 +11,12 @@
   <meta property="og:site_name" content="Digitalwerkstatt Thalfang">
   <meta property="og:title" content="Digitalwerkstatt Thalfang | Webdesign, Website-Betreuung & SEO-Basics">
   <meta property="og:description" content="Professionelle Websites, laufende Betreuung, SEO-Basics und Google-Indexierung für Unternehmen.">
-  <meta name="theme-color" content="#0f1720">
+  <meta name="theme-color" content="#0a1628">
   <link rel="icon" type="image/png" href="imgs/DW_Logo.png">
   <link rel="apple-touch-icon" href="imgs/DW_Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script type="application/ld+json">
     {
@@ -35,6 +38,7 @@
   </script>
 </head>
 <body data-ga-id="G-K1KCV8G4DZ">
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar" data-scroll-progress></div></div>
   <a class="skip-link" href="#main-content">Direkt zum Inhalt</a>
 
   <header class="site-header" data-header>
@@ -60,12 +64,17 @@
   </header>
 
   <main id="main-content">
+
+    <!-- HERO -->
     <section class="hero" id="top">
-      <div class="hero-visual" aria-hidden="true">
+      <div class="hero-bg" aria-hidden="true">
         <span class="hero-orb hero-orb-one" data-depth="18"></span>
         <span class="hero-orb hero-orb-two" data-depth="30"></span>
+        <span class="hero-orb hero-orb-three" data-depth="12"></span>
         <span class="hero-grid"></span>
+        <span class="hero-noise"></span>
       </div>
+
       <div class="container hero-layout">
         <div class="hero-copy reveal is-visible">
           <p class="eyebrow">Webdesign und digitale Betreuung für Unternehmen</p>
@@ -78,10 +87,61 @@
             <a class="button button-primary" href="#kontakt">Projekt anfragen</a>
             <a class="button button-secondary" href="#leistungen">Leistungen ansehen</a>
           </div>
+          <div class="hero-badges" aria-hidden="true">
+            <span class="hero-badge">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 8 6 12 14 4"/></svg>
+              Fester Ansprechpartner
+            </span>
+            <span class="hero-badge">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 8 6 12 14 4"/></svg>
+              Klare Kommunikation
+            </span>
+            <span class="hero-badge">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="2 8 6 12 14 4"/></svg>
+              DSGVO-konform
+            </span>
+          </div>
         </div>
+
+        <div class="hero-device" aria-hidden="true">
+          <div class="device-chrome">
+            <div class="device-topbar">
+              <div class="device-dots"><span></span><span></span><span></span></div>
+              <div class="device-urlbar"></div>
+            </div>
+            <div class="device-body">
+              <div class="device-header-bar"></div>
+              <div class="device-hero-block">
+                <div class="device-line w-70"></div>
+                <div class="device-line w-50"></div>
+                <div class="device-line w-60"></div>
+                <div class="device-btns">
+                  <div class="device-btn primary"></div>
+                  <div class="device-btn outline"></div>
+                </div>
+              </div>
+              <div class="device-cards-row">
+                <div class="device-card"></div>
+                <div class="device-card"></div>
+                <div class="device-card"></div>
+              </div>
+              <div class="device-section">
+                <div class="device-line w-40"></div>
+                <div class="device-line w-80"></div>
+                <div class="device-line w-55"></div>
+              </div>
+            </div>
+          </div>
+          <div class="device-glow"></div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
       </div>
     </section>
 
+    <!-- LEISTUNGEN -->
     <section class="section section-light" id="leistungen">
       <div class="container">
         <div class="section-heading reveal">
@@ -91,22 +151,54 @@
         </div>
         <div class="card-grid services-grid">
           <article class="info-card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
             <h3>Webdesign</h3>
             <p>Sie erhalten einen professionellen Webauftritt mit klarer Struktur, passender Gestaltung und überzeugender Nutzerführung auf allen Endgeräten.</p>
           </article>
           <article class="info-card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
             <h3>Website-Management</h3>
             <p>Inhalte, Anpassungen und laufende Pflege werden zuverlässig betreut, damit Ihre Website aktuell und organisatorisch sauber bleibt.</p>
           </article>
           <article class="info-card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
             <h3>Technische Betreuung</h3>
             <p>Technik, Stabilität, Erreichbarkeit und die funktionale Grundlage Ihrer Website werden laufend im Blick behalten.</p>
           </article>
           <article class="info-card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
             <h3>Inhaltspflege & Pflichtseiten</h3>
             <p>Texte, Bilder, Impressum und Datenschutz werden strukturiert eingebunden, damit Ihr Auftritt vollständig und professionell wirkt.</p>
           </article>
           <article class="info-card reveal">
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
             <h3>SEO-Basics & Google-Indexierung</h3>
             <p>Technische Grundlagen für Suchmaschinen, eine saubere Google-Indexierung und sinnvolle Optimierungen stärken Ihre digitale Sichtbarkeit.</p>
           </article>
@@ -114,6 +206,7 @@
       </div>
     </section>
 
+    <!-- MODELLE -->
     <section class="section section-accent" id="modelle">
       <div class="container">
         <div class="section-heading reveal">
@@ -123,6 +216,7 @@
         </div>
         <div class="card-grid model-grid">
           <article class="model-card reveal">
+            <span class="model-number">01</span>
             <h3>Einmalige Website-Erstellung</h3>
             <ul>
               <li>Klare Projektstruktur von der Planung bis zum Go-live</li>
@@ -131,6 +225,7 @@
             </ul>
           </article>
           <article class="model-card reveal">
+            <span class="model-number">02</span>
             <h3>Laufende Website-Betreuung</h3>
             <ul>
               <li>Regelmäßige Pflege und strukturierte Inhaltsanpassungen</li>
@@ -139,6 +234,7 @@
             </ul>
           </article>
           <article class="model-card reveal">
+            <span class="model-number">03</span>
             <h3>Komplettpaket aus Design + Management</h3>
             <ul>
               <li>Webdesign, technische Umsetzung und Betreuung aus einer Hand</li>
@@ -147,6 +243,7 @@
             </ul>
           </article>
           <article class="model-card reveal">
+            <span class="model-number">04</span>
             <h3>Individuelle digitale Lösungen</h3>
             <ul>
               <li>Passende Lösungen für besondere Anforderungen oder bestehende Systeme</li>
@@ -158,6 +255,7 @@
       </div>
     </section>
 
+    <!-- ÜBER UNS -->
     <section class="section section-light" id="ueber-uns">
       <div class="container split-layout">
         <div class="split-copy reveal">
@@ -170,29 +268,68 @@
         </div>
         <div class="trust-panel reveal">
           <div class="trust-item">
-            <h3>Persönlicher Ansprechpartner</h3>
-            <p>Sie sprechen direkt mit einem festen Ansprechpartner, der Ihr Projekt kennt und Entscheidungen nachvollziehbar begleitet.</p>
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Persönlicher Ansprechpartner</h3>
+              <p>Sie sprechen direkt mit einem festen Ansprechpartner, der Ihr Projekt kennt und Entscheidungen nachvollziehbar begleitet.</p>
+            </div>
           </div>
           <div class="trust-item">
-            <h3>Moderne Umsetzung</h3>
-            <p>Gestaltung, Technik und Seitenstruktur werden so aufgebaut, dass Ihr Unternehmen professionell und zeitgemäß auftritt.</p>
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Moderne Umsetzung</h3>
+              <p>Gestaltung, Technik und Seitenstruktur werden so aufgebaut, dass Ihr Unternehmen professionell und zeitgemäß auftritt.</p>
+            </div>
           </div>
           <div class="trust-item">
-            <h3>Zuverlässige Betreuung</h3>
-            <p>Auch nach dem Start bleibt Ihre Website gepflegt, aktuell und bei Bedarf fachlich begleitet.</p>
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Zuverlässige Betreuung</h3>
+              <p>Auch nach dem Start bleibt Ihre Website gepflegt, aktuell und bei Bedarf fachlich begleitet.</p>
+            </div>
           </div>
           <div class="trust-item">
-            <h3>Klare Kommunikation</h3>
-            <p>Sie erhalten klare Abstimmungen, verständliche Empfehlungen und keine unnötig komplizierten Fachbegriffe.</p>
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Klare Kommunikation</h3>
+              <p>Sie erhalten klare Abstimmungen, verständliche Empfehlungen und keine unnötig komplizierten Fachbegriffe.</p>
+            </div>
           </div>
           <div class="trust-item">
-            <h3>Lösungen mit Anspruch</h3>
-            <p>Die Zusammenarbeit richtet sich an Unternehmen, die Wert auf Qualität, Seriosität und einen belastbaren digitalen Auftritt legen.</p>
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="6"/>
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Lösungen mit Anspruch</h3>
+              <p>Die Zusammenarbeit richtet sich an Unternehmen, die Wert auf Qualität, Seriosität und einen belastbaren digitalen Auftritt legen.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ABLAUF -->
     <section class="section section-dark" id="ablauf">
       <div class="container">
         <div class="section-heading reveal">
@@ -225,6 +362,7 @@
       </div>
     </section>
 
+    <!-- KONTAKT -->
     <section class="section section-light" id="kontakt">
       <div class="container contact-layout">
         <div class="contact-copy reveal">
@@ -235,17 +373,40 @@
             und eine professionelle Einschätzung zu Ihrem Vorhaben.
           </p>
           <div class="contact-points">
-            <div>
-              <strong>E-Mail</strong>
-              <span>dw.thalfang@gmail.com</span>
+            <div class="contact-point">
+              <div class="contact-point-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <strong>E-Mail</strong>
+                <span>dw.thalfang@gmail.com</span>
+              </div>
             </div>
-            <div>
-              <strong>Telefon</strong>
-              <span>+49 176 41972459</span>
+            <div class="contact-point">
+              <div class="contact-point-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Telefon</strong>
+                <span>+49 176 41972459</span>
+              </div>
             </div>
-            <div>
-              <strong>Standort</strong>
-              <span>Nussbaumweg 14, 54424 Thalfang</span>
+            <div class="contact-point">
+              <div class="contact-point-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Standort</strong>
+                <span>Nussbaumweg 14, 54424 Thalfang</span>
+              </div>
             </div>
           </div>
         </div>
@@ -308,7 +469,7 @@
         <span>|</span>
         <button type="button" class="footer-button footer-button-inline" data-open-cookie-settings>Cookie-Einstellungen</button>
       </div>
-      <p>©2026 Digitalwerkstatt Thalfang. Alle Rechte Vorbehalten.</p>
+      <p>©<span data-current-year>2026</span> Digitalwerkstatt Thalfang. Alle Rechte Vorbehalten.</p>
       <div class="footer-minimal-group footer-minimal-group-end">
         <a href="impressum.html">Impressum</a>
         <span>|</span>
@@ -324,6 +485,7 @@
     </svg>
   </button>
 
+  <!-- COOKIE BANNER -->
   <div class="cookie-banner" hidden data-cookie-banner>
     <div class="cookie-banner-inner">
       <div>
@@ -372,6 +534,7 @@
     </div>
   </div>
 
+  <!-- SUCCESS MODAL -->
   <div class="contact-success-modal" hidden data-contact-success-modal aria-hidden="true">
     <div class="contact-success-modal-backdrop" data-contact-modal-close></div>
     <div class="contact-success-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-success-title">

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freiwillige Feuerwehr Thalfang — Retten · Löschen · Bergen · Schützen</title>
+  <meta name="description" content="Die Freiwillige Feuerwehr Thalfang am Erbeskopf: ehrenamtlich, rund um die Uhr einsatzbereit. Brandbekämpfung, technische Hilfeleistung, Jugendfeuerwehr und Mitmach-Angebote.">
+  <meta name="theme-color" content="#0a0706">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Freiwillige Feuerwehr Thalfang">
+  <meta property="og:description" content="Ehrenamtlich. Rund um die Uhr einsatzbereit. Retten · Löschen · Bergen · Schützen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='0' y2='0'%3E%3Cstop offset='0' stop-color='%23ff2d2d'/%3E%3Cstop offset='.55' stop-color='%23ff7a1a'/%3E%3Cstop offset='1' stop-color='%23ffcf4d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M16 2c2 5 7 7 7 13a7 7 0 0 1-3 5.7c.6-2.4-.4-4.6-2-6 .2 2.4-1 3.8-2.7 4.8-1.4.8-2.3 2-2.3 3.7A5 5 0 0 0 9 18c0-5 5-6 7-16Z' fill='url(%23g)'/%3E%3C/svg%3E">
+</head>
+<body data-theme="dark">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <!-- ambient fx -->
+  <div class="fx-grain" aria-hidden="true"></div>
+  <div class="fx-glow" aria-hidden="true"><span></span><span></span><span></span></div>
+  <canvas class="fx-embers" id="embers" aria-hidden="true"></canvas>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a href="#top" class="brand" aria-label="Freiwillige Feuerwehr Thalfang — Startseite">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="34" height="34">
+            <defs><linearGradient id="bg1" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff2d2d"/><stop offset=".55" stop-color="#ff7a1a"/><stop offset="1" stop-color="#ffcf4d"/></linearGradient></defs>
+            <path d="M16 2c2 5 7 7 7 13a7 7 0 0 1-3 5.7c.6-2.4-.4-4.6-2-6 .2 2.4-1 3.8-2.7 4.8-1.4.8-2.3 2-2.3 3.7A5 5 0 0 1 9 18c0-5 5-6 7-16Z" fill="url(#bg1)"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <strong>Feuerwehr Thalfang</strong>
+          <span>VG Thalfang am Erbeskopf</span>
+        </span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Hauptnavigation">
+        <a href="#einheit">Einheit</a>
+        <a href="#aufgaben">Aufgaben</a>
+        <a href="#fuhrpark">Fuhrpark</a>
+        <a href="#jugend">Jugend</a>
+        <a href="#mitmachen">Mitmachen</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="tel:112" class="nav__emergency" data-cursor>
+          <span class="nav__emergency-dot" aria-hidden="true"></span>
+          Notruf <strong>112</strong>
+        </a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="status-pill reveal" role="status">
+            <span class="status-pill__dot" aria-hidden="true"></span>
+            <span class="status-pill__label">Status:</span>
+            <span class="status-pill__value">Einsatzbereit</span>
+            <span class="status-pill__sep" aria-hidden="true"></span>
+            <span class="status-pill__meta">24/7 · rund um die Uhr</span>
+          </p>
+
+          <h1 class="hero__title">
+            <span class="line"><span class="word">Wenn jede</span></span>
+            <span class="line"><span class="word grad">Sekunde</span> <span class="word">zählt,</span></span>
+            <span class="line"><span class="word">sind wir da.</span></span>
+          </h1>
+
+          <p class="hero__lead reveal">
+            Die <strong>Freiwillige Feuerwehr Thalfang</strong> schützt Menschen, Tiere
+            und Werte in der Verbandsgemeinde am Erbeskopf — ehrenamtlich, hochmotiviert
+            und rund um die Uhr alarmbereit.
+          </p>
+
+          <div class="hero__cta reveal">
+            <a href="tel:112" class="btn btn--alert" data-magnetic>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 3.5 6.2 2 2 0 0 1 5.5 4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span>Notruf 112</span>
+            </a>
+            <a href="#mitmachen" class="btn btn--ghost" data-magnetic>
+              <span>Mitglied werden</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <p class="hero__kicker reveal">Retten<i>·</i>Löschen<i>·</i>Bergen<i>·</i>Schützen</p>
+        </div>
+
+        <!-- live dispatch / lagestatus panel -->
+        <aside class="dispatch reveal" aria-label="Lagestatus der Wache">
+          <div class="dispatch__top">
+            <span class="dispatch__title">Lagestatus</span>
+            <span class="dispatch__live"><span class="dispatch__live-dot" aria-hidden="true"></span>Live</span>
+          </div>
+
+          <div class="dispatch__status">
+            <span class="dispatch__ready-dot" aria-hidden="true"></span>
+            <div>
+              <strong>Einsatzbereit</strong>
+              <span>Alle Systeme betriebsklar</span>
+            </div>
+            <span class="dispatch__clock mono" id="dispatchClock">--:--</span>
+          </div>
+
+          <dl class="dispatch__grid">
+            <div><dt>Wache</dt><dd>Gerätehaus Thalfang</dd></div>
+            <div><dt>Fahrzeuge</dt><dd><span class="ok">6&nbsp;/&nbsp;6</span> bereit</dd></div>
+            <div><dt>Atemschutz</dt><dd>12 Geräteträger</dd></div>
+            <div><dt>Ø Ausrückzeit</dt><dd class="mono">08:24 min</dd></div>
+          </dl>
+
+          <div class="dispatch__radio">
+            <div class="dispatch__radio-info">
+              <span class="dispatch__radio-band mono">DIGITALFUNK · 2&nbsp;m / 4&nbsp;m</span>
+              <span class="dispatch__radio-note">Funkverkehr aktiv</span>
+            </div>
+            <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+
+          <p class="dispatch__foot mono">Letzter Einsatz · heute 03:41 — Ölspur B&nbsp;327</p>
+        </aside>
+      </div>
+
+      <div class="hero__scrollcue" aria-hidden="true"><span></span>scrollen</div>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Brandbekämpfung</span><i>✦</i><span>Technische&nbsp;Hilfeleistung</span><i>✦</i><span>Menschenrettung</span><i>✦</i><span>Katastrophenschutz</span><i>✦</i><span>Jugendfeuerwehr</span><i>✦</i><span>Ehrenamt</span><i>✦</i>
+        <span>Brandbekämpfung</span><i>✦</i><span>Technische&nbsp;Hilfeleistung</span><i>✦</i><span>Menschenrettung</span><i>✦</i><span>Katastrophenschutz</span><i>✦</i><span>Jugendfeuerwehr</span><i>✦</i><span>Ehrenamt</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ===================== STATS ===================== -->
+    <section class="section stats-sec" id="einheit" aria-label="Die Einheit in Zahlen">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker">/ Die Einheit</p>
+          <h2>Ein eingespieltes Team aus <span class="grad">Nachbarn, die helfen.</span></h2>
+          <p class="sec-lead">Seit Generationen tragen Frauen und Männer aus Thalfang und den umliegenden
+            Ortsgemeinden den blauen Helm — neben Beruf, Familie und Alltag.</p>
+        </header>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <b class="stat__num" data-count="62" data-suffix="">0</b>
+            <span class="stat__label">Aktive Kräfte</span>
+          </div>
+          <div class="stat reveal">
+            <b class="stat__num" data-count="85" data-suffix="+">0</b>
+            <span class="stat__label">Einsätze pro Jahr</span>
+          </div>
+          <div class="stat reveal">
+            <b class="stat__num" data-count="6" data-suffix="">0</b>
+            <span class="stat__label">Einsatzfahrzeuge</span>
+          </div>
+          <div class="stat reveal">
+            <b class="stat__num" data-count="138" data-suffix="">0</b>
+            <span class="stat__label">Jahre im Dienst</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NOTRUF ===================== -->
+    <section class="section notruf" aria-labelledby="notruf-title">
+      <div class="wrap notruf__inner">
+        <div class="notruf__head">
+          <p class="kicker kicker--alert">/ Im Notfall</p>
+          <h2 id="notruf-title">Notruf wählen — <span class="grad-alert">112</span></h2>
+          <p class="sec-lead">Feuer, Unfall, Menschen in Gefahr? Wählen Sie sofort die 112.
+            Der Notruf ist kostenlos und europaweit erreichbar. Bleiben Sie ruhig und
+            beantworten Sie die fünf wichtigen Fragen.</p>
+          <a href="tel:112" class="btn btn--alert btn--big" data-magnetic>
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 3.5 6.2 2 2 0 0 1 5.5 4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span>Jetzt 112 anrufen</span>
+          </a>
+        </div>
+
+        <ol class="wfragen" aria-label="Die fünf W-Fragen beim Notruf">
+          <li class="wfragen__item reveal"><span class="wfragen__no mono">01</span><div><h3>Wo ist es passiert?</h3><p>Ort, Straße, Hausnummer, Etage oder markante Punkte.</p></div></li>
+          <li class="wfragen__item reveal"><span class="wfragen__no mono">02</span><div><h3>Was ist passiert?</h3><p>Beschreiben Sie kurz die Lage: Brand, Unfall, Notlage.</p></div></li>
+          <li class="wfragen__item reveal"><span class="wfragen__no mono">03</span><div><h3>Wie viele Betroffene?</h3><p>Zahl der verletzten oder gefährdeten Personen.</p></div></li>
+          <li class="wfragen__item reveal"><span class="wfragen__no mono">04</span><div><h3>Welche Verletzungen?</h3><p>Art der Verletzungen oder erkennbare Gefahren.</p></div></li>
+          <li class="wfragen__item reveal"><span class="wfragen__no mono">05</span><div><h3>Warten auf Rückfragen!</h3><p>Legen Sie nie zuerst auf — die Leitstelle führt Sie.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== AUFGABEN / BENTO ===================== -->
+    <section class="section" id="aufgaben">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker">/ Unsere Aufgaben</p>
+          <h2>Mehr als nur <span class="grad">Feuer löschen.</span></h2>
+          <p class="sec-lead">Über 60 % unserer Alarmierungen sind heute technische Hilfeleistungen.
+            Wir sind die schnelle Hilfe für nahezu jede Notlage — Tag und Nacht.</p>
+        </header>
+
+        <div class="bento">
+          <article class="acard acard--lg reveal" data-tilt>
+            <span class="acard__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c1.6 4 5.5 5.5 5.5 10a5.5 5.5 0 0 1-2.4 4.5c.5-1.9-.3-3.6-1.6-4.7.2 1.9-.8 3-2.1 3.8-1.1.6-1.8 1.6-1.8 2.9A4 4 0 0 1 6.5 16c0-4 4-4.8 5.5-13Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Brandbekämpfung</h3>
+            <p>Vom Zimmerbrand bis zum Großeinsatz: Wir schützen Menschen und Sachwerte,
+              riegeln Gefahren ab und bringen das Feuer kontrolliert unter Kontrolle —
+              ausgebildet, ausgerüstet und atemschutztauglich.</p>
+            <span class="acard__tag mono">Löschangriff · Atemschutz · Riegelstellung</span>
+          </article>
+
+          <article class="acard reveal" data-tilt>
+            <span class="acard__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.7 6.3 3 3M3 21l3.5-1 9.3-9.3a2.1 2.1 0 0 0 0-3l-.5-.5a2.1 2.1 0 0 0-3 0L3 16.5 3 21Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Technische Hilfe</h3>
+            <p>Eingeklemmte Personen, Verkehrsunfälle, Sturmschäden — mit hydraulischem
+              Rettungsgerät und Spezialwerkzeug.</p>
+          </article>
+
+          <article class="acard reveal" data-tilt>
+            <span class="acard__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 20a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Menschen- &amp; Tierrettung</h3>
+            <p>Wir retten aus Höhen, Tiefen und Wasser — und holen auch das Tier vom Baum.</p>
+          </article>
+
+          <article class="acard acard--wide reveal" data-tilt>
+            <span class="acard__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a8 8 0 0 1 16 0M2 14h20M7 14a5 5 0 0 1 10 0M12 4v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Unwetter &amp; Hochwasser</h3>
+            <p>Vollgelaufene Keller, umgestürzte Bäume, überflutete Straßen: Bei Starkregen
+              und Sturm sind wir oft im Dauereinsatz — mit Pumpen, Kettensäge und klarer Einsatztaktik.</p>
+            <span class="acard__tag mono">Pumpen · Sandsäcke · Verkehrssicherung</span>
+          </article>
+
+          <article class="acard reveal" data-tilt>
+            <span class="acard__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v5c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Katastrophenschutz</h3>
+            <p>Überörtliche Hilfe im Verband — vorbereitet auf Großschadenslagen.</p>
+          </article>
+
+          <article class="acard reveal" data-tilt>
+            <span class="acard__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 9.5V14c0 1.5 2.2 2.8 5 2.8s5-1.3 5-2.8V9.5M21 7v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Brandschutzerziehung</h3>
+            <p>Wir gehen in Kitas und Schulen — Prävention rettet Leben.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FUHRPARK ===================== -->
+    <section class="section fuhrpark" id="fuhrpark">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker">/ Fuhrpark</p>
+          <h2>Technik, die <span class="grad">Leben rettet.</span></h2>
+          <p class="sec-lead">Sechs Fahrzeuge, ein Ziel: schnell, sicher und schlagkräftig vor Ort.
+            Hier ein Auszug aus unserem Bestand.</p>
+        </header>
+      </div>
+
+      <div class="fleet" id="fleet">
+        <div class="fleet__track">
+          <article class="vehicle reveal" data-cursor>
+            <div class="vehicle__media"><span class="vehicle__code mono">ELW&nbsp;1</span></div>
+            <div class="vehicle__body">
+              <h3>Einsatzleitwagen</h3>
+              <p>Mobile Einsatzzentrale für Führung und Kommunikation.</p>
+              <dl class="vehicle__specs">
+                <div><dt>Besatzung</dt><dd class="mono">1 / 2</dd></div>
+                <div><dt>Funk</dt><dd class="mono">4 Kanäle</dd></div>
+                <div><dt>Baujahr</dt><dd class="mono">2021</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="vehicle reveal" data-cursor>
+            <div class="vehicle__media"><span class="vehicle__code mono">HLF&nbsp;20</span></div>
+            <div class="vehicle__body">
+              <h3>Hilfeleistungs­löschfahrzeug</h3>
+              <p>Das Herzstück: Löschwasser, Pumpe und schwerer Rettungssatz an Bord.</p>
+              <dl class="vehicle__specs">
+                <div><dt>Besatzung</dt><dd class="mono">1 / 8</dd></div>
+                <div><dt>Wasser</dt><dd class="mono">2.000 l</dd></div>
+                <div><dt>Pumpe</dt><dd class="mono">2.000 l/min</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="vehicle reveal" data-cursor>
+            <div class="vehicle__media"><span class="vehicle__code mono">TLF&nbsp;4000</span></div>
+            <div class="vehicle__body">
+              <h3>Tanklöschfahrzeug</h3>
+              <p>Großer Wasservorrat für Wald-, Flächen- und Großbrände.</p>
+              <dl class="vehicle__specs">
+                <div><dt>Besatzung</dt><dd class="mono">1 / 2</dd></div>
+                <div><dt>Wasser</dt><dd class="mono">4.000 l</dd></div>
+                <div><dt>Schaum</dt><dd class="mono">200 l</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="vehicle reveal" data-cursor>
+            <div class="vehicle__media"><span class="vehicle__code mono">LF&nbsp;10</span></div>
+            <div class="vehicle__body">
+              <h3>Löschgruppenfahrzeug</h3>
+              <p>Vielseitiges Fahrzeug für Brand- und Hilfeleistungseinsätze.</p>
+              <dl class="vehicle__specs">
+                <div><dt>Besatzung</dt><dd class="mono">1 / 8</dd></div>
+                <div><dt>Wasser</dt><dd class="mono">1.200 l</dd></div>
+                <div><dt>Baujahr</dt><dd class="mono">2018</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="vehicle reveal" data-cursor>
+            <div class="vehicle__media"><span class="vehicle__code mono">MTW</span></div>
+            <div class="vehicle__body">
+              <h3>Mannschaftstransportwagen</h3>
+              <p>Bringt Einsatzkräfte und Material flexibel zur Einsatzstelle.</p>
+              <dl class="vehicle__specs">
+                <div><dt>Besatzung</dt><dd class="mono">1 / 8</dd></div>
+                <div><dt>Anhänger</dt><dd class="mono">3,5 t</dd></div>
+                <div><dt>Baujahr</dt><dd class="mono">2020</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="vehicle reveal" data-cursor>
+            <div class="vehicle__media"><span class="vehicle__code mono">GW-L</span></div>
+            <div class="vehicle__body">
+              <h3>Gerätewagen Logistik</h3>
+              <p>Nachschub, Sonderausrüstung und Material für lange Einsätze.</p>
+              <dl class="vehicle__specs">
+                <div><dt>Besatzung</dt><dd class="mono">1 / 2</dd></div>
+                <div><dt>Ladung</dt><dd class="mono">Rollcontainer</dd></div>
+                <div><dt>Baujahr</dt><dd class="mono">2019</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+      <p class="fleet__hint wrap mono" aria-hidden="true">← seitlich scrollen →</p>
+    </section>
+
+    <!-- ===================== JUGEND ===================== -->
+    <section class="section jugend" id="jugend">
+      <div class="wrap jugend__inner">
+        <div class="jugend__media reveal" aria-hidden="true">
+          <div class="jugend__badge mono">ab 10 Jahren</div>
+          <div class="jugend__ring"></div>
+          <svg class="jugend__icon" viewBox="0 0 24 24"><path d="M12 3c1.6 4 5.5 5.5 5.5 10a5.5 5.5 0 0 1-2.4 4.5c.5-1.9-.3-3.6-1.6-4.7.2 1.9-.8 3-2.1 3.8-1.1.6-1.8 1.6-1.8 2.9A4 4 0 0 1 6.5 16c0-4 4-4.8 5.5-13Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="jugend__copy">
+          <p class="kicker reveal">/ Jugendfeuerwehr</p>
+          <h2 class="reveal">Heute Jugend. <span class="grad">Morgen Lebensretter.</span></h2>
+          <p class="lead reveal">In der Jugendfeuerwehr Thalfang lernen Kinder und Jugendliche
+            ab 10 Jahren spielerisch, was Teamgeist, Verantwortung und Technik bedeuten —
+            mit echten Übungen, Zeltlagern, Wettkämpfen und jeder Menge Spaß.</p>
+          <ul class="ticks reveal">
+            <li>Übungsstunde jeden Freitag, 18:00 Uhr</li>
+            <li>Eigene Ausrüstung &amp; geschulte Betreuer</li>
+            <li>Ausflüge, Zeltlager und Kreiswettbewerbe</li>
+            <li>Kostenlos — Schnuppern jederzeit möglich</li>
+          </ul>
+          <a href="#mitmachen" class="btn btn--ghost reveal" data-magnetic>
+            <span>Schnuppertermin anfragen</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EINSÄTZE / AKTUELLES ===================== -->
+    <section class="section" id="aktuelles">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker">/ Aktuelles</p>
+          <h2>Aus dem <span class="grad">Einsatzgeschehen.</span></h2>
+        </header>
+
+        <div class="news">
+          <article class="ncard reveal" data-tilt>
+            <div class="ncard__top">
+              <span class="ncard__tag ncard__tag--th">Technische Hilfe</span>
+              <time class="mono" datetime="2026-06-21">21.06.2026</time>
+            </div>
+            <h3>Verkehrsunfall auf der B 327</h3>
+            <p>Zwei Fahrzeuge kollidierten auf der Hochwaldstraße. Eine Person wurde
+              schonend befreit und an den Rettungsdienst übergeben.</p>
+            <span class="ncard__more">Mehr lesen<i aria-hidden="true">→</i></span>
+          </article>
+
+          <article class="ncard reveal" data-tilt>
+            <div class="ncard__top">
+              <span class="ncard__tag ncard__tag--fire">Brandeinsatz</span>
+              <time class="mono" datetime="2026-06-09">09.06.2026</time>
+            </div>
+            <h3>Flächenbrand am Erbeskopf</h3>
+            <p>Bei anhaltender Trockenheit verhinderten wir gemeinsam mit Nachbarwehren
+              die Ausbreitung auf den angrenzenden Wald.</p>
+            <span class="ncard__more">Mehr lesen<i aria-hidden="true">→</i></span>
+          </article>
+
+          <article class="ncard reveal" data-tilt>
+            <div class="ncard__top">
+              <span class="ncard__tag ncard__tag--info">Übung</span>
+              <time class="mono" datetime="2026-05-28">28.05.2026</time>
+            </div>
+            <h3>Gemeinsame Atemschutzübung</h3>
+            <p>Realistische Brandsimulation im Übungscontainer — Menschenrettung
+              unter Nullsicht für unsere Atemschutzgeräteträger.</p>
+            <span class="ncard__more">Mehr lesen<i aria-hidden="true">→</i></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MITMACHEN / FORM ===================== -->
+    <section class="section mitmachen" id="mitmachen">
+      <div class="wrap mitmachen__inner">
+        <div class="mitmachen__copy">
+          <p class="kicker reveal">/ Mitmachen</p>
+          <h2 class="reveal">Werde Teil der <span class="grad">Mannschaft.</span></h2>
+          <p class="lead reveal">Du brauchst keine Vorerfahrung — nur den Willen zu helfen.
+            Wir bilden dich kostenlos aus, vom Truppmann bis zur Spezialausbildung.
+            Quereinsteiger, Rückkehrer und Unterstützer im Hintergrund sind herzlich willkommen.</p>
+
+          <ul class="ticks reveal">
+            <li>Fundierte, kostenlose Ausbildung</li>
+            <li>Starke Gemeinschaft &amp; echter Zusammenhalt</li>
+            <li>Übungsabend: dienstags, 19:30 Uhr</li>
+            <li>Auch ohne Einsatzdienst: Technik, Verwaltung, Förderverein</li>
+          </ul>
+
+          <div class="mitmachen__cards reveal">
+            <div class="minicard"><strong class="mono">18 – 67</strong><span>Aktiver Dienst</span></div>
+            <div class="minicard"><strong class="mono">10 – 17</strong><span>Jugendfeuerwehr</span></div>
+            <div class="minicard"><strong class="mono">∞</strong><span>Fördermitglied</span></div>
+          </div>
+        </div>
+
+        <div class="formwrap reveal">
+          <form class="form" id="contactForm" novalidate>
+            <h3 class="form__title">Interesse? Schreib uns.</h3>
+            <p class="form__sub">Wir melden uns und laden dich unverbindlich zu einem Übungsabend ein.</p>
+
+            <div class="field">
+              <label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Vor- und Nachname">
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="f-email">E-Mail <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="name@beispiel.de">
+              </div>
+              <div class="field">
+                <label for="f-phone">Telefon</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-interest">Ich interessiere mich für</label>
+              <select id="f-interest" name="company">
+                <option value="Aktiver Einsatzdienst">Aktiver Einsatzdienst</option>
+                <option value="Jugendfeuerwehr">Jugendfeuerwehr (10–17 J.)</option>
+                <option value="Fördermitgliedschaft">Fördermitgliedschaft</option>
+                <option value="Unterstützung im Hintergrund">Unterstützung im Hintergrund</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="f-message">Nachricht <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-message" name="message" rows="4" required placeholder="Erzähl uns kurz, warum du dabei sein möchtest …"></textarea>
+            </div>
+
+            <!-- honeypot -->
+            <div class="hp" aria-hidden="true">
+              <label for="f-website">Website (bitte leer lassen)</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block" id="formSubmit" data-magnetic>
+              <span>Nachricht senden</span>
+            </button>
+
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+            <p class="form__hint">Mit dem Absenden stimmst du der Verarbeitung deiner Angaben gemäß
+              unserer <a href="datenschutz.html">Datenschutzerklärung</a> zu. <span class="req" aria-hidden="true">*</span> Pflichtfeld.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KONTAKT ===================== -->
+    <section class="section kontakt" id="kontakt">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <p class="kicker">/ Kontakt</p>
+          <h2>Findet uns am <span class="grad">Gerätehaus.</span></h2>
+        </header>
+
+        <div class="kontakt__grid">
+          <div class="kontakt__card reveal">
+            <span class="kontakt__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+            <h3>Anschrift</h3>
+            <p>Feuerwehrgerätehaus Thalfang<br>Saarstraße 3<br>54424 Thalfang</p>
+          </div>
+
+          <div class="kontakt__card reveal">
+            <span class="kontakt__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 3.5 6.2 2 2 0 0 1 5.5 4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <h3>Erreichbarkeit</h3>
+            <p><span class="mono">Notruf:</span> <a href="tel:112">112</a><br>
+               <span class="mono">Verwaltung:</span> <a href="tel:+4965049999">06504 99999</a><br>
+               <a href="mailto:info@feuerwehr-thalfang.de">info@feuerwehr-thalfang.de</a></p>
+          </div>
+
+          <div class="kontakt__card reveal">
+            <span class="kontakt__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3>Dienstzeiten</h3>
+            <p><strong>Übungsabend:</strong> dienstags, 19:30 Uhr<br>
+               <strong>Jugendfeuerwehr:</strong> freitags, 18:00 Uhr</p>
+          </div>
+        </div>
+
+        <div class="kontakt__map reveal" role="img" aria-label="Symbolische Karte des Standorts in Thalfang">
+          <div class="kontakt__map-grid" aria-hidden="true"></div>
+          <span class="kontakt__pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" fill="currentColor"/><circle cx="12" cy="10" r="2.4" fill="#0a0706"/></svg>
+          </span>
+          <span class="kontakt__maplabel mono" aria-hidden="true">54424 Thalfang · 49.7461° N, 7.0042° O</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section cta">
+      <div class="wrap cta__inner">
+        <div class="cta__glow" aria-hidden="true"></div>
+        <p class="kicker reveal">/ Gemeinsam stark</p>
+        <h2 class="cta__title reveal">Ein Ehrenamt, das <span class="grad">wirklich zählt.</span></h2>
+        <p class="cta__lead reveal">Ob im Einsatz, in der Jugend oder als Förderer —
+          deine Hilfe macht den Unterschied.</p>
+        <div class="cta__btns reveal">
+          <a href="#mitmachen" class="btn btn--primary btn--big" data-magnetic><span>Mitglied werden</span></a>
+          <a href="tel:112" class="btn btn--ghost btn--big" data-magnetic><span>Notruf 112</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__big" aria-hidden="true"><span>112</span></div>
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="30" height="30"><path d="M16 2c2 5 7 7 7 13a7 7 0 0 1-3 5.7c.6-2.4-.4-4.6-2-6 .2 2.4-1 3.8-2.7 4.8-1.4.8-2.3 2-2.3 3.7A5 5 0 0 1 9 18c0-5 5-6 7-16Z" fill="url(#bg1)"/></svg>
+        </span>
+        <p><strong>Freiwillige Feuerwehr Thalfang</strong><br>
+        Verbandsgemeinde Thalfang am Erbeskopf</p>
+        <p class="footer__claim mono">Retten · Löschen · Bergen · Schützen</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Seiten">
+        <h2>Navigation</h2>
+        <a href="#einheit">Einheit</a>
+        <a href="#aufgaben">Aufgaben</a>
+        <a href="#fuhrpark">Fuhrpark</a>
+        <a href="#jugend">Jugendfeuerwehr</a>
+        <a href="#mitmachen">Mitmachen</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Kontakt und Rechtliches">
+        <h2>Service</h2>
+        <a href="#kontakt">Kontakt</a>
+        <a href="mailto:info@feuerwehr-thalfang.de">E-Mail</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+
+      <div class="footer__col footer__emergency">
+        <h2>Im Notfall</h2>
+        <a href="tel:112" class="footer__112">
+          <span class="footer__112-dot" aria-hidden="true"></span>
+          Notruf <strong>112</strong>
+        </a>
+        <p class="footer__note">Feuer · Unfall · Lebensgefahr</p>
+      </div>
+    </div>
+
+    <div class="wrap footer__bar">
+      <span>© <span id="year">2026</span> Freiwillige Feuerwehr Thalfang</span>
+      <a href="#top" class="footer__top" data-magnetic><span>Nach oben ↑</span></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

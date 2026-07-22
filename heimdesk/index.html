@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Heimdesk – Ticketverwaltung | Digitalwerkstatt Thalfang</title>
+  <meta name="description" content="IT Heimdesk – interner Support: Tickets erstellen, bearbeiten, den Status ändern und löschen.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f5f3ee">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="brand">
+        <span class="brand__mark">IT</span>
+        <div>
+          <p class="brand__name">IT Heimdesk</p>
+          <p class="brand__sub">Digitalwerkstatt Thalfang</p>
+        </div>
+      </div>
+      <nav class="stats" aria-label="Ticketübersicht">
+        <span class="stat"><strong id="statOpen">0</strong> offen</span>
+        <span class="stat"><strong id="statProgress">0</strong> in Arbeit</span>
+        <span class="stat"><strong id="statDone">0</strong> erledigt</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel" aria-labelledby="formTitle">
+      <h1 id="formTitle" class="panel__title">Neues Ticket</h1>
+      <form id="ticketForm" class="form" novalidate>
+        <div class="field">
+          <label for="title">Titel</label>
+          <input type="text" id="title" name="title" required maxlength="120"
+                 placeholder="z. B. Drucker im Büro reagiert nicht">
+        </div>
+        <div class="field">
+          <label for="requester">Melder:in</label>
+          <input type="text" id="requester" name="requester" required maxlength="80"
+                 placeholder="Name">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="category">Kategorie</label>
+            <select id="category" name="category">
+              <option value="Hardware">Hardware</option>
+              <option value="Software">Software</option>
+              <option value="Netzwerk">Netzwerk</option>
+              <option value="Zugang / Konto">Zugang / Konto</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="priority">Priorität</label>
+            <select id="priority" name="priority">
+              <option value="Niedrig">Niedrig</option>
+              <option value="Mittel" selected>Mittel</option>
+              <option value="Hoch">Hoch</option>
+              <option value="Dringend">Dringend</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="description">Beschreibung</label>
+          <textarea id="description" name="description" rows="4" maxlength="1000"
+                    placeholder="Was ist passiert? Welche Schritte wurden schon versucht?"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Ticket anlegen</button>
+      </form>
+    </section>
+
+    <section class="panel panel--list" aria-labelledby="listTitle">
+      <div class="list-head">
+        <h2 id="listTitle" class="panel__title">Tickets</h2>
+        <div class="list-tools">
+          <label class="visually-hidden" for="filterStatus">Status filtern</label>
+          <select id="filterStatus" class="filter">
+            <option value="all">Alle Status</option>
+            <option value="Offen">Offen</option>
+            <option value="In Arbeit">In Arbeit</option>
+            <option value="Erledigt">Erledigt</option>
+          </select>
+          <button type="button" id="clearDone" class="btn btn--ghost">Erledigte löschen</button>
+        </div>
+      </div>
+
+      <p id="emptyState" class="empty" hidden>Noch keine Tickets vorhanden. Lege links das erste an.</p>
+      <ul id="ticketList" class="tickets" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <!-- Vorlage für ein Ticket -->
+  <template id="ticketTemplate">
+    <li class="ticket" data-id="">
+      <div class="ticket__main">
+        <div class="ticket__head">
+          <span class="badge badge--prio"></span>
+          <span class="badge badge--status"></span>
+          <span class="ticket__cat"></span>
+        </div>
+        <h3 class="ticket__title"></h3>
+        <p class="ticket__desc"></p>
+        <p class="ticket__meta">
+          <span class="ticket__requester"></span>
+          <span class="ticket__date"></span>
+        </p>
+      </div>
+      <div class="ticket__actions">
+        <label class="visually-hidden">Status ändern</label>
+        <select class="ticket__status">
+          <option value="Offen">Offen</option>
+          <option value="In Arbeit">In Arbeit</option>
+          <option value="Erledigt">Erledigt</option>
+        </select>
+        <button type="button" class="btn btn--danger ticket__delete" aria-label="Ticket löschen">
+          Löschen
+        </button>
+      </div>
+    </li>
+  </template>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

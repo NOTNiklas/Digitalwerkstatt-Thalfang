@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Player | Digitalwerkstatt Thalfang</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <div class="player" data-state="loading" data-player>
+      <header class="player__head">
+        <span class="player__playlist" data-field="playlist">Jetzt läuft</span>
+      </header>
+
+      <div class="player__art-wrap">
+        <svg class="player__ring" viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="player__ring-track" cx="60" cy="60" r="54"></circle>
+          <circle class="player__ring-progress" cx="60" cy="60" r="54" data-ring></circle>
+        </svg>
+        <div class="player__art" data-art>
+          <svg class="player__art-fallback" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="player__meta">
+        <p class="player__title" data-field="title">Nicht verbunden</p>
+        <p class="player__artist" data-field="artist">–</p>
+      </div>
+
+      <div class="player__time">
+        <span data-field="progress">0:00</span>
+        <span data-field="duration">0:00</span>
+      </div>
+
+      <div class="player__controls">
+        <button type="button" class="player__btn" data-action="previous" aria-label="Vorheriger Titel">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 6h2v12H6zM20 6L9 12l11 6z"/></svg>
+        </button>
+        <button type="button" class="player__btn player__btn--play" data-action="toggle" aria-label="Abspielen">
+          <svg data-icon="play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg data-icon="pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        </button>
+        <button type="button" class="player__btn" data-action="next" aria-label="Nächster Titel">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 6h2v12h-2zM4 6l11 6-11 6z"/></svg>
+        </button>
+      </div>
+
+      <p class="player__status" data-field="status"></p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
